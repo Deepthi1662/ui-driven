@@ -5,8 +5,8 @@ import Header from "./components/Header";
 import CardDetails from "./components/CardDetails";
 import { Customer360, fetchCustomer360Details } from "./services/customer";
 import BarChartCustom from "./components/BarChartCustom";
-import Sidebar from "./Sidebar";
-import CardWithTabs from "./CardWithTabs";
+import Sidebar from "./components/Sidebar";
+import LineChartCustom from "./components/LineChartCustom";
 
 export default function Dashboard() {
   const [inputValue, setInputValue] = useState<string>("");
@@ -70,6 +70,7 @@ export default function Dashboard() {
               details={relationshipDetails}
             ></CardDetails>
             <BarChartCustom data={desktopData} xKey="days" yKey="balance" />
+            <LineChartCustom data={desktopData} xKey="days" yKey="balance" />
             <br />
           </main>
         </div>
